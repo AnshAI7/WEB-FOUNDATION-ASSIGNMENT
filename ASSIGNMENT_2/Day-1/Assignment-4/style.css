@@ -1,0 +1,68 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* 2. Hero Section Layout */
+.hero-section {
+    background-color: #0f172a; /* Deep, professional slate blue/black */
+    color: #ffffff;
+    /* Massive vertical padding is the secret to a good hero section */
+    padding: 120px 20px; 
+    text-align: center;
+    border-bottom: 5px solid #3b82f6; /* Accent border on the bottom */
+}
+
+/* 3. Restricting Content Width for Readability */
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto; /* Centers the content block horizontally */
+}
+
+/* 4. Typography Styling */
+.hero-content h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: #94a3b8; /* Softened text color for sub-headline */
+    line-height: 1.6;
+    margin-bottom: 40px; /* Large bottom margin to push the button down */
+}
+
+/* 5. The Call to Action (CTA) Button - Box Model Focus */
+.cta-button {
+    /* inline-block is required to apply padding/margin to an anchor tag properly */
+    display: inline-block; 
+    background-color: #3b82f6; /* Primary brand color */
+    color: #ffffff;
+    text-decoration: none; /* Removes the default hyperlink underline */
+    
+    /* Internal spacing (Box Model) */
+    padding: 16px 36px; 
+    
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 2px solid transparent;
+    
+    /* A subtle hover transition */
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+    /* An alternative way to highlight hover without layout shift */
+    border: 2px solid #93c5fd; 
+}

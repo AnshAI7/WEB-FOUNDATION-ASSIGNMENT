@@ -1,0 +1,106 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #e2e8f0; /* Soft, cool gray background */
+    color: #333333;
+}
+
+/* 2. The Profile Card (Box Model Focus) */
+.profile-card {
+    /* Margin auto centers the block horizontally */
+    margin: 100px auto; 
+    max-width: 360px;
+    background-color: #ffffff;
+    
+    /* Border and Border-radius */
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    
+    /* Box Shadow for depth */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    /* Prevent internal elements from overflowing rounded corners */
+    overflow: hidden; 
+    text-align: center;
+}
+
+/* 3. Profile Image */
+.profile-image {
+    width: 120px;
+    height: 120px;
+    /* 50% border-radius makes a perfect circle */
+    border-radius: 50%;
+    /* Top margin pushes it down, bottom margin spaces it from text */
+    margin: 40px auto 20px auto; 
+    /* A thick border to make it pop */
+    border: 4px solid #f8fafc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* 4. Profile Information */
+.profile-info {
+    /* Padding provides internal breathing room */
+    padding: 0 30px 30px 30px; 
+}
+
+.profile-info h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.profile-title {
+    font-size: 0.95rem;
+    color: #3b82f6; /* Professional blue */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-bio {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* 5. Statistics Footer */
+.profile-stats {
+    background-color: #f8fafc; /* Slightly darker than card white */
+    border-top: 1px solid #e2e8f0;
+    /* Box Model trick: no left/right padding so stat-boxes can fill the width */
+    padding: 20px 0; 
+}
+
+/* Inline-block allows side-by-side placement without Flexbox (Day 1 constraint) */
+.stat-box {
+    display: inline-block;
+    width: 30%; /* Divides the footer into three equal sections */
+}
+
+/* Add left/right borders to the middle stat box for separation */
+.stat-box:nth-child(2) {
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.5px;
+}
