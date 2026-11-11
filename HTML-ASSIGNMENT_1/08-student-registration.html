@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+</head>
+<body>
+  <header>
+    <h1>Student Registration Form</h1>
+    <p>Fields marked with * are required.</p>
+  </header>
+
+  <main>
+    <form action="#" method="post" enctype="multipart/form-data">
+
+      <fieldset>
+        <legend>Personal details</legend>
+
+        <p>
+          <label for="full-name">Full name *</label><br>
+          <input type="text" id="full-name" name="full_name" required minlength="3" maxlength="60" autocomplete="name" placeholder="As per your mark sheet">
+        </p>
+
+        <p>
+          <label for="father-name">Father's / guardian's name *</label><br>
+          <input type="text" id="father-name" name="guardian_name" required maxlength="60">
+        </p>
+
+        <p>
+          <label for="dob">Date of birth *</label><br>
+          <input type="date" id="dob" name="dob" required min="1990-01-01" max="2012-12-31" autocomplete="bday">
+        </p>
+
+        <fieldset>
+          <legend>Gender *</legend>
+          <input type="radio" id="gender-m" name="gender" value="male" required>
+          <label for="gender-m">Male</label>
+          <input type="radio" id="gender-f" name="gender" value="female">
+          <label for="gender-f">Female</label>
+          <input type="radio" id="gender-o" name="gender" value="other">
+          <label for="gender-o">Other</label>
+          <input type="radio" id="gender-n" name="gender" value="undisclosed">
+          <label for="gender-n">Prefer not to say</label>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact details</legend>
+
+        <p>
+          <label for="email">Email address *</label><br>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com">
+        </p>
+
+        <p>
+          <label for="mobile">Mobile number *</label><br>
+          <input type="tel" id="mobile" name="mobile" required pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel" placeholder="10-digit number" aria-describedby="mobile-hint">
+          <br><small id="mobile-hint">10 digits, starting with 6, 7, 8 or 9.</small>
+        </p>
+
+        <p>
+          <label for="address">Address *</label><br>
+          <textarea id="address" name="address" rows="3" cols="40" required maxlength="200" autocomplete="street-address"></textarea>
+        </p>
+
+        <p>
+          <label for="city">City *</label><br>
+          <input type="text" id="city" name="city" list="city-list" required autocomplete="address-level2">
+          <datalist id="city-list">
+            <option value="Bareilly"></option>
+            <option value="Lucknow"></option>
+            <option value="Delhi"></option>
+            <option value="Meerut"></option>
+            <option value="Moradabad"></option>
+          </datalist>
+        </p>
+
+        <p>
+          <label for="pincode">PIN code *</label><br>
+          <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}" inputmode="numeric" maxlength="6" autocomplete="postal-code">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Academic details</legend>
+
+        <p>
+          <label for="course">Course applied for *</label><br>
+          <select id="course" name="course" required>
+            <option value="">-- Select a course --</option>
+            <optgroup label="Undergraduate">
+              <option value="bca">BCA</option>
+              <option value="bba">BBA</option>
+              <option value="bcom">B.Com</option>
+            </optgroup>
+            <optgroup label="Postgraduate">
+              <option value="mca">MCA</option>
+              <option value="mba">MBA</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <p>
+          <label for="percentage">Previous qualification percentage *</label><br>
+          <input type="number" id="percentage" name="percentage" required min="33" max="100" step="0.01">
+        </p>
+
+        <p>
+          <label for="marksheet">Upload last mark sheet (PDF) *</label><br>
+          <input type="file" id="marksheet" name="marksheet" accept="application/pdf" required>
+        </p>
+
+        <fieldset>
+          <legend>Areas of interest (choose any)</legend>
+          <input type="checkbox" id="int-ai" name="interests" value="ai">
+          <label for="int-ai">Artificial Intelligence</label><br>
+          <input type="checkbox" id="int-web" name="interests" value="web">
+          <label for="int-web">Web development</label><br>
+          <input type="checkbox" id="int-data" name="interests" value="data">
+          <label for="int-data">Data science</label><br>
+          <input type="checkbox" id="int-app" name="interests" value="app">
+          <label for="int-app">App development</label>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account</legend>
+
+        <p>
+          <label for="username">Username *</label><br>
+          <input type="text" id="username" name="username" required minlength="4" maxlength="20" pattern="[A-Za-z0-9_]+" autocomplete="username" aria-describedby="username-hint">
+          <br><small id="username-hint">4 to 20 letters, digits or underscores.</small>
+        </p>
+
+        <p>
+          <label for="password">Password *</label><br>
+          <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password" aria-describedby="password-hint">
+          <br><small id="password-hint">At least 8 characters.</small>
+        </p>
+      </fieldset>
+
+      <p>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I confirm that the details above are correct and accept the terms and conditions. *</label>
+      </p>
+
+      <p>
+        <button type="submit">Register</button>
+        <button type="reset">Clear form</button>
+      </p>
+    </form>
+  </main>
+</body>
+</html>

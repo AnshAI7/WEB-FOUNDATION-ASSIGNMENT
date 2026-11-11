@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form - Junior Software Developer</title>
+</head>
+<body>
+  <header>
+    <h1>Job Application Form</h1>
+    <p>Apply for a role at Example Technologies Pvt. Ltd. Fields marked * are required.</p>
+  </header>
+
+  <main>
+    <form action="#" method="post" enctype="multipart/form-data">
+
+      <fieldset>
+        <legend>1. Position</legend>
+
+        <p>
+          <label for="position">Position applied for *</label><br>
+          <select id="position" name="position" required>
+            <option value="">-- Select --</option>
+            <option value="software-developer">Junior Software Developer</option>
+            <option value="data-analyst">Data Analyst</option>
+            <option value="ml-engineer">Machine Learning Intern</option>
+            <option value="mobile-developer">Mobile App Developer</option>
+          </select>
+        </p>
+
+        <fieldset>
+          <legend>Employment type *</legend>
+          <input type="radio" id="type-ft" name="employment_type" value="full-time" required>
+          <label for="type-ft">Full-time</label>
+          <input type="radio" id="type-pt" name="employment_type" value="part-time">
+          <label for="type-pt">Part-time</label>
+          <input type="radio" id="type-in" name="employment_type" value="internship">
+          <label for="type-in">Internship</label>
+        </fieldset>
+
+        <p>
+          <label for="start-date">Earliest start date *</label><br>
+          <input type="date" id="start-date" name="start_date" required>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Personal information</legend>
+
+        <p>
+          <label for="first-name">First name *</label><br>
+          <input type="text" id="first-name" name="first_name" required autocomplete="given-name">
+        </p>
+        <p>
+          <label for="last-name">Last name *</label><br>
+          <input type="text" id="last-name" name="last_name" required autocomplete="family-name">
+        </p>
+        <p>
+          <label for="email">Email address *</label><br>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </p>
+        <p>
+          <label for="phone">Phone number *</label><br>
+          <input type="tel" id="phone" name="phone" required pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel" aria-describedby="phone-hint">
+          <br><small id="phone-hint">10-digit Indian mobile number.</small>
+        </p>
+        <p>
+          <label for="address">Current address *</label><br>
+          <textarea id="address" name="address" rows="3" cols="40" required autocomplete="street-address"></textarea>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Education and experience</legend>
+
+        <p>
+          <label for="degree">Highest qualification *</label><br>
+          <select id="degree" name="degree" required>
+            <option value="">-- Select --</option>
+            <option value="12th">12th pass</option>
+            <option value="diploma">Diploma</option>
+            <option value="bachelors">Bachelor's degree</option>
+            <option value="masters">Master's degree</option>
+          </select>
+        </p>
+        <p>
+          <label for="institute">College / university *</label><br>
+          <input type="text" id="institute" name="institute" required>
+        </p>
+        <p>
+          <label for="grad-year">Year of graduation (expected or actual) *</label><br>
+          <input type="number" id="grad-year" name="graduation_year" required min="2000" max="2035" step="1">
+        </p>
+        <p>
+          <label for="experience">Years of experience *</label><br>
+          <input type="number" id="experience" name="experience_years" required min="0" max="40" step="0.5" value="0">
+        </p>
+        <p>
+          <label for="employer">Current or most recent employer</label><br>
+          <input type="text" id="employer" name="employer" autocomplete="organization">
+        </p>
+
+        <fieldset>
+          <legend>Technical skills (choose all that apply)</legend>
+          <input type="checkbox" id="sk-python" name="skills" value="python">
+          <label for="sk-python">Python</label><br>
+          <input type="checkbox" id="sk-html" name="skills" value="html-css">
+          <label for="sk-html">HTML and CSS</label><br>
+          <input type="checkbox" id="sk-js" name="skills" value="javascript">
+          <label for="sk-js">JavaScript</label><br>
+          <input type="checkbox" id="sk-sql" name="skills" value="sql">
+          <label for="sk-sql">SQL</label><br>
+          <input type="checkbox" id="sk-ml" name="skills" value="ml">
+          <label for="sk-ml">Machine learning</label>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>4. Documents and links</legend>
+
+        <p>
+          <label for="resume">Resume (PDF or Word, max 2 MB) *</label><br>
+          <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+        </p>
+        <p>
+          <label for="linkedin">LinkedIn profile</label><br>
+          <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/your-handle">
+        </p>
+        <p>
+          <label for="portfolio">Portfolio or GitHub</label><br>
+          <input type="url" id="portfolio" name="portfolio" placeholder="https://github.com/your-username">
+        </p>
+        <p>
+          <label for="cover-letter">Why should we hire you? *</label><br>
+          <textarea id="cover-letter" name="cover_letter" rows="6" cols="50" required minlength="50" maxlength="1000" aria-describedby="cover-hint"></textarea>
+          <br><small id="cover-hint">50 to 1000 characters.</small>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>5. Preferences</legend>
+
+        <p>
+          <label for="salary">Expected salary (INR per year)</label><br>
+          <input type="number" id="salary" name="expected_salary" min="0" step="10000">
+        </p>
+        <p>
+          <label for="notice">Notice period *</label><br>
+          <select id="notice" name="notice_period" required>
+            <option value="">-- Select --</option>
+            <option value="immediate">Immediate</option>
+            <option value="15">15 days</option>
+            <option value="30">30 days</option>
+            <option value="60">60 days or more</option>
+          </select>
+        </p>
+        <fieldset>
+          <legend>Willing to relocate? *</legend>
+          <input type="radio" id="reloc-y" name="relocate" value="yes" required>
+          <label for="reloc-y">Yes</label>
+          <input type="radio" id="reloc-n" name="relocate" value="no">
+          <label for="reloc-n">No</label>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>6. Declaration</legend>
+        <p>
+          <input type="checkbox" id="declare" name="declaration" required>
+          <label for="declare">I declare that the information provided is true and complete. *</label>
+        </p>
+        <p>
+          <label for="signature">Type your full name as signature *</label><br>
+          <input type="text" id="signature" name="signature" required>
+        </p>
+        <p>
+          <label for="sign-date">Date *</label><br>
+          <input type="date" id="sign-date" name="sign_date" required>
+        </p>
+      </fieldset>
+
+      <p>
+        <button type="submit">Submit application</button>
+        <button type="reset">Reset</button>
+      </p>
+    </form>
+  </main>
+</body>
+</html>
