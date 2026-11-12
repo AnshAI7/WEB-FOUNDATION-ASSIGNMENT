@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methods - Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="store-wrapper">
+        <header>
+            <h2>Cart Object Manager</h2>
+            <p>Managing state and calculations inside a JS Object.</p>
+        </header>
+
+        <div class="store-grid">
+            
+            <!-- Controls Panel -->
+            <section class="controls-panel">
+                <h3>Add Product</h3>
+                
+                <div class="input-group">
+                    <label>Product Name</label>
+                    <input type="text" id="prod-name" value="Mechanical Keyboard">
+                </div>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Price ($)</label>
+                        <input type="number" id="prod-price" value="89.99" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label>Quantity</label>
+                        <input type="number" id="prod-qty" value="1">
+                    </div>
+                </div>
+
+                <button onclick="handleAddToCart()" class="btn-add">Add to Cart</button>
+                <div id="error-msg" class="error-text hidden"></div>
+            </section>
+
+            <!-- Receipt Panel -->
+            <section class="receipt-panel">
+                <h3>Current Cart</h3>
+                
+                <ul id="cart-list" class="cart-list">
+                    <li class="empty-cart">Cart is empty.</li>
+                </ul>
+
+                <div class="totals-box">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal-display">$0.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Tax (8%):</span>
+                        <span id="tax-display">$0.00</span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Grand Total:</span>
+                        <span id="grand-display">$0.00</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

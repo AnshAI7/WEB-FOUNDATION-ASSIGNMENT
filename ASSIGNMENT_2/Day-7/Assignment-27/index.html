@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Cleaning Utility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header>
+            <h2>Data Sanitization</h2>
+            <p>Cleaning messy strings before they hit the database.</p>
+        </header>
+
+        <section class="form-card">
+            <form id="profileForm">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="fName">First Name (Messy)</label>
+                        <input type="text" id="fName" value="   aNsH  ">
+                    </div>
+                    <div class="input-group">
+                        <label for="lName">Last Name (Messy)</label>
+                        <input type="text" id="lName" value=" mIShrA ">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address (Messy)</label>
+                    <input type="text" id="email" value="   Ansh87374@GMAIL.com   ">
+                </div>
+
+                <button type="submit" class="clean-btn">Clean & Submit</button>
+            </form>
+        </section>
+
+        <!-- Output section to show the fixed data -->
+        <section id="output-card" class="output-card hidden">
+            <h3>Sanitized Profile</h3>
+            <div class="profile-details">
+                <p><strong>Full Name:</strong> <span id="out-name"></span></p>
+                <p><strong>Email:</strong> <span id="out-email"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

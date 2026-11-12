@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Functions: Merge & Calculate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="dashboard-wrapper">
+        <header>
+            <h1>System Utilities</h1>
+            <p>Testing object merging and array aggregation.</p>
+        </header>
+
+        <div class="grid-container">
+            <!-- Settings Panel -->
+            <section class="panel">
+                <h2>1. App Settings</h2>
+                <p class="subtitle">Override the system defaults.</p>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="darkMode">
+                    <label for="darkMode">Enable Dark Mode</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="emailNotifs" checked>
+                    <label for="emailNotifs">Email Notifications</label>
+                </div>
+
+                <button onclick="applySettings()" class="action-btn bg-indigo">Merge Settings</button>
+                <pre id="settings-output" class="output-box">Waiting for input...</pre>
+            </section>
+
+            <!-- Checkout Panel -->
+            <section class="panel">
+                <h2>2. Calculate Totals</h2>
+                <p class="subtitle">Enter prices separated by commas.</p>
+                
+                <div class="input-group">
+                    <input type="text" id="priceList" placeholder="e.g. 15, 45, 9.99, 120">
+                </div>
+
+                <button onclick="processTotals()" class="action-btn bg-emerald">Calculate Sum</button>
+                <div id="total-output" class="output-box total-box">Total: $0.00</div>
+            </section>
+        </div>
+    </main>
+
+    <script src="utils.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

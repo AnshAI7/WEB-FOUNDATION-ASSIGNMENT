@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #e2e8f0;
+    color: #1e293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-wrapper {
+    width: 100%;
+    max-width: 450px;
+}
+
+.list-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3b82f6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h2 {
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.controls {
+    margin-bottom: 25px;
+}
+
+#itemInput {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border-color 0.2s;
+}
+
+#itemInput:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: #ffffff;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.btn-add { background-color: #3b82f6; }
+.btn-remove { background-color: #ef4444; }
+
+/* List Display */
+.shopping-list {
+    list-style: none;
+    margin-bottom: 20px;
+    min-height: 150px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f8fafc;
+}
+
+.shopping-list li {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #334155;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.shopping-list li:last-child {
+    margin-bottom: 0;
+}
+
+.empty-msg {
+    color: #94a3b8 !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-align: center;
+    padding-top: 50px !important;
+}
+
+.status-bar {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+#item-count {
+    color: #0f172a;
+    font-size: 1rem;
+}

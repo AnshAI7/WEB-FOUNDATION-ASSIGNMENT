@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Objects - Product Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="product-container">
+        <!-- Left Side: Product Image (Using SVG Placeholder) -->
+        <div class="product-image">
+            <svg width="120" height="120" fill="none" stroke="#94a3b8" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+        </div>
+
+        <!-- Right Side: Product Details -->
+        <div class="product-details">
+            <div class="brand-badge" id="prod-brand">Brand</div>
+            <h1 id="prod-name">Product Name Loading...</h1>
+            <div class="price-row">
+                <span class="price" id="prod-price">$0.00</span>
+                <span class="stock-status" id="prod-stock">Checking stock...</span>
+            </div>
+
+            <p id="prod-desc" class="description">Description loading...</p>
+
+            <!-- Nested Data: Specs -->
+            <div class="specs-section">
+                <h3>Technical Specifications</h3>
+                <ul id="prod-specs" class="specs-list">
+                    <!-- JS will inject specs here -->
+                </ul>
+            </div>
+
+            <!-- Nested Data: Reviews -->
+            <div class="reviews-section">
+                <h3>Recent Reviews</h3>
+                <div id="prod-reviews" class="reviews-list">
+                    <!-- JS will inject reviews here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope & Hoisting Worksheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="worksheet-wrapper">
+        <header class="worksheet-header">
+            <h1>JS Scope & Hoisting Worksheet</h1>
+            <p>Predict the output of the code snippets below, then click to reveal the true answer and explanation.</p>
+        </header>
+
+        <!-- Question 1: Variable Hoisting -->
+        <section class="question-card">
+            <h2>Snippet 1: The 'var' Mystery</h2>
+            <div class="code-block">
+<pre>
+console.log(playerName);
+var playerName = "Ansh";
+</pre>
+            </div>
+            <button onclick="revealAnswer(1)" class="reveal-btn">Reveal Output & Explanation</button>
+            <div id="answer-1" class="answer-box hidden">
+                <p><strong>Actual Output:</strong> <code>undefined</code> (Not an error!)</p>
+                <p><strong>Explanation (Hoisting):</strong> In JavaScript, variable <em>declarations</em> (using <code>var</code>) are moved to the top of their scope before the code executes. However, the <em>initialization</em> (="Ansh") is left behind. So, JS knows the variable exists, but it hasn't been assigned a value yet when the console.log runs.</p>
+            </div>
+        </section>
+
+        <!-- Question 2: Block Scope (let vs var) -->
+        <section class="question-card">
+            <h2>Snippet 2: Block Scope Clash</h2>
+            <div class="code-block">
+<pre>
+if (true) {
+    var scoreVar = 90;
+    let scoreLet = 100;
+}
+console.log(scoreVar);
+console.log(scoreLet);
+</pre>
+            </div>
+            <button onclick="revealAnswer(2)" class="reveal-btn">Reveal Output & Explanation</button>
+            <div id="answer-2" class="answer-box hidden">
+                <p><strong>Actual Output:</strong> <code>90</code>, followed by <code>ReferenceError: scoreLet is not defined</code>.</p>
+                <p><strong>Explanation (Block Scope):</strong> Variables declared with <code>var</code> do not care about code blocks (like <code>if</code> or <code>for</code> loops); they leak out globally. Variables declared with <code>let</code> and <code>const</code> are strictly locked inside the <code>{ }</code> block where they were created. They cannot be accessed from the outside.</p>
+            </div>
+        </section>
+
+        <!-- Question 3: Function Hoisting -->
+        <section class="question-card">
+            <h2>Snippet 3: Time Travel Functions</h2>
+            <div class="code-block">
+<pre>
+triggerAlert();
+
+function triggerAlert() {
+    console.log("System Online!");
+}
+</pre>
+            </div>
+            <button onclick="revealAnswer(3)" class="reveal-btn">Reveal Output & Explanation</button>
+            <div id="answer-3" class="answer-box hidden">
+                <p><strong>Actual Output:</strong> <code>"System Online!"</code> (It runs perfectly).</p>
+                <p><strong>Explanation (Function Hoisting):</strong> Unlike variables, standard Function Declarations are fully hoisted to the top of the script, including their entire inner logic. This allows you to safely call a function in your code before you actually write the function definition.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

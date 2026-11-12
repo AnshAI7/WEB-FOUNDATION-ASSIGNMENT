@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Transformer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="dashboard">
+        <header>
+            <h2>Product Data Transformer</h2>
+            <p>Mastering .map(), .filter(), and .reduce()</p>
+        </header>
+
+        <div class="grid">
+            <!-- Left Column: Controls -->
+            <section class="controls-panel">
+                <h3>Transform Actions</h3>
+                <p>Click a button to process the dataset.</p>
+
+                <button onclick="extractNames()" class="btn btn-map">
+                    1. Extract Names (.map)
+                </button>
+                
+                <button onclick="filterInStock()" class="btn btn-filter">
+                    2. Show In-Stock Only (.filter)
+                </button>
+                
+                <button onclick="calculateTotalValue()" class="btn btn-reduce">
+                    3. Calculate Total Value (.reduce)
+                </button>
+                
+                <button onclick="resetView()" class="btn btn-reset">
+                    Reset View
+                </button>
+            </section>
+
+            <!-- Right Column: Data Output -->
+            <section class="output-panel">
+                <div class="output-header">
+                    <h3 id="output-title">Raw Dataset</h3>
+                </div>
+                <pre id="data-display" class="code-window">Loading data...</pre>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

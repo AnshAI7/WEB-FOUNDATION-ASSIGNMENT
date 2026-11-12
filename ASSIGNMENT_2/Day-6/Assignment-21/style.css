@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.worksheet-wrapper {
+    width: 100%;
+    max-width: 700px;
+}
+
+.worksheet-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.worksheet-header h1 {
+    color: #0f172a;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.worksheet-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.question-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #3b82f6; /* Blue accent line */
+}
+
+.question-card h2 {
+    font-size: 1.3rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+/* Simulated Code Editor Theme */
+.code-block {
+    background-color: #1e293b;
+    color: #38bdf8;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.reveal-btn {
+    background-color: #f8fafc;
+    color: #3b82f6;
+    border: 1px solid #cbd5e1;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.reveal-btn:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+}
+
+/* Hidden state for answers */
+.hidden {
+    display: none;
+}
+
+.answer-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0fdf4; /* Light green background */
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    color: #166534;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.answer-box p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.answer-box p:last-child {
+    margin-bottom: 0;
+}
+
+.answer-box code {
+    background-color: #dcfce7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

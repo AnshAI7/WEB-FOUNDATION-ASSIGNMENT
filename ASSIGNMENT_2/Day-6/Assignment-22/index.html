@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guard Clause Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="form-wrapper">
+        <section class="registration-card">
+            <header>
+                <h2>Account Setup</h2>
+                <p>Testing input validation with early returns.</p>
+            </header>
+
+            <form id="registrationForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Choose a username">
+                </div>
+
+                <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="Must be 18+">
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Min 8 characters">
+                </div>
+
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+
+            <!-- Alert box that will be populated by JS -->
+            <div id="alert-box" class="alert hidden"></div>
+        </section>
+    </main>
+
+    <!-- Load the utility first, then the main script -->
+    <script src="validator.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

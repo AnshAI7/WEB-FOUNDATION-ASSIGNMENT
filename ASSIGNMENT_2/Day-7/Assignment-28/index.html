@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Strings Problem Set</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="playground-wrapper">
+        <header>
+            <h2>Algorithm Playground</h2>
+            <p>Solving classic computer science problems using JS Arrays & Strings.</p>
+        </header>
+
+        <div class="problem-grid">
+            
+            <!-- Problem 1: Reverse String -->
+            <section class="problem-card">
+                <h3>1. Reverse a String</h3>
+                <p>Convert the string to an array, reverse it, and join it back.</p>
+                <div class="input-group">
+                    <input type="text" id="p1-input" value="JavaScript">
+                    <button onclick="solveReverse()" class="btn">Reverse</button>
+                </div>
+                <div class="output-box" id="p1-output">Result will appear here</div>
+            </section>
+
+            <!-- Problem 2: Longest Word -->
+            <section class="problem-card">
+                <h3>2. Find Longest Word</h3>
+                <p>Split a sentence into an array of words and find the longest one.</p>
+                <div class="input-group">
+                    <input type="text" id="p2-input" value="The quick brown fox jumped over the lazy dog">
+                    <button onclick="solveLongest()" class="btn">Find Longest</button>
+                </div>
+                <div class="output-box" id="p2-output">Result will appear here</div>
+            </section>
+
+            <!-- Problem 3: Remove Duplicates -->
+            <section class="problem-card">
+                <h3>3. Remove Duplicates</h3>
+                <p>Filter an array to keep only unique values.</p>
+                <div class="input-group">
+                    <input type="text" id="p3-input" value="apple, apple, banana, orange, banana">
+                    <button onclick="solveDuplicates()" class="btn">Clean Array</button>
+                </div>
+                <div class="output-box" id="p3-output">Result will appear here</div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

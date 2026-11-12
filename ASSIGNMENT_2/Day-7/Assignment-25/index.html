@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-wrapper">
+        <section class="list-card">
+            <header>
+                <h2>Smart Shopping List</h2>
+                <p>Managing JS Arrays & Strings. (Press F12 for Console logs)</p>
+            </header>
+
+            <div class="controls">
+                <input type="text" id="itemInput" placeholder="e.g., apples, milk, bread">
+                
+                <div class="button-group">
+                    <button onclick="handleAddItem()" class="btn-add">Add to List</button>
+                    <button onclick="handleRemoveItem()" class="btn-remove">Remove</button>
+                </div>
+            </div>
+
+            <!-- The list will be injected here from the JS Array -->
+            <ul id="shopping-list-display" class="shopping-list">
+                <li class="empty-msg">Your list is currently empty.</li>
+            </ul>
+            
+            <div class="status-bar">
+                Total Items: <span id="item-count">0</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Utilities - Profile Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header>
+            <h2>Profile Summary Generator</h2>
+            <p>Dynamically parsing user data using Object.entries()</p>
+        </header>
+
+        <div class="split-view">
+            <!-- Left Side: User Input Form & Raw Data -->
+            <section class="control-panel">
+                
+                <div class="input-form">
+                    <label>Enter Profile Details:</label>
+                    <input type="text" id="in-name" placeholder="Full Name" value="Ansh Mishra">
+                    <input type="text" id="in-edu" placeholder="Education" value="BCA Artificial Intelligence">
+                    <input type="text" id="in-inst" placeholder="Institution" value="Invertis University">
+                    <input type="text" id="in-roles" placeholder="Target Roles" value="Software Engineer, AI Researcher">
+                    <input type="text" id="in-skills" placeholder="Core Skills" value="JavaScript, Python, Java">
+                </div>
+
+                <button onclick="buildProfile()" class="generate-btn">Generate Profile Card</button>
+                
+                <div class="data-preview">
+                    <h3>Raw Object Data Generated:</h3>
+                    <pre id="raw-data">Waiting for generation...</pre>
+                </div>
+            </section>
+
+            <!-- Right Side: Generated Summary -->
+            <section class="summary-panel">
+                <div id="profile-card" class="card hidden">
+                    <div class="card-header">
+                        <div class="avatar">👨‍💻</div>
+                        <h3 id="card-title">Developer Profile</h3>
+                    </div>
+                    <ul id="dynamic-list" class="details-list">
+                        <!-- JS Object Utilities will build this dynamically -->
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
