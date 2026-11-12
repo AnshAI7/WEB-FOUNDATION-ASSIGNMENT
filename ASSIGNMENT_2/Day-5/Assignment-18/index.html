@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Debugging Exercise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="debug-wrapper">
+        <section class="calculator-card">
+            <header>
+                <h2>Inventory Counter</h2>
+                <p>Press F12 to view the debugging logs in the Console.</p>
+            </header>
+
+            <div class="input-group">
+                <label for="applesInput">Boxes of Apples:</label>
+                <input type="number" id="applesInput" value="10">
+            </div>
+
+            <div class="input-group">
+                <label for="orangesInput">Boxes of Oranges:</label>
+                <input type="number" id="orangesInput" value="5">
+            </div>
+
+            <button onclick="calculateTotal()" class="action-btn">Calculate Total</button>
+
+            <div class="result-box">
+                <h3 id="final-output">Total Boxes: 0</h3>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

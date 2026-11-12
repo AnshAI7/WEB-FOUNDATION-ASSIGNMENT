@@ -1,0 +1,132 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 40px 20px;
+}
+
+/* 2. Store Header */
+.store-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.store-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.store-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.store-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   3. The CSS Grid Implementation
+   ========================================= */
+.ecommerce-grid {
+    display: grid;
+    /* This automatically figures out how many 260px columns fit on the screen */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px; /* Perfect spacing between rows and columns */
+}
+
+/* 4. Product Card Styling */
+.product-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    /* Using Flexbox inside the Grid Item to push the button to the bottom */
+    display: flex;
+    flex-direction: column;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* 5. Card Image */
+.product-image-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents image distortion */
+    transition: transform 0.5s ease;
+}
+
+.product-item:hover .product-img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* 6. Card Details */
+.product-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Forces the info box to take up remaining vertical space */
+}
+
+.category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #3b82f6;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    color: #1e293b;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: auto; /* Pushes the price and button to the bottom */
+    margin-bottom: 16px;
+}
+
+/* 7. Buy Button */
+.buy-btn {
+    width: 100%;
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.buy-btn:hover {
+    background-color: #3b82f6;
+}

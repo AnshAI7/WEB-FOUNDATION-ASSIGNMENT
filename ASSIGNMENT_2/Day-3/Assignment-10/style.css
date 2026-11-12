@@ -1,0 +1,76 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0f172a; /* Dark background for a sleek gallery look */
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+/* 2. Gallery Header */
+.gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-header h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.gallery-header p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* 3. The Grid Layout */
+.gallery-section {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Automatically creates columns minimum 300px wide, max 1 fraction of space */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Forces every row to be exactly 250px tall for a uniform grid */
+    grid-auto-rows: 250px; 
+    gap: 15px; /* Space between photos */
+}
+
+/* 4. Grid Items (The Image Containers) */
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; /* Slightly rounded corners */
+    overflow: hidden; /* CRITICAL: Prevents the zoomed image from spilling out of the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 5. Image Styling & Object-Fit */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    /* CRITICAL: object-fit: cover acts like background-size: cover for <img> tags.
+       It crops the image to fill the box perfectly without stretching it. */
+    object-fit: cover; 
+    
+    /* Prepares the image for a smooth hover zoom */
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: brightness(0.9); /* Dims images slightly by default */
+}
+
+/* 6. Interactive Hover State */
+.gallery-item:hover img {
+    /* Zooms the image in by 10% */
+    transform: scale(1.1); 
+    /* Brightens the image to 100% on hover to draw the eye */
+    filter: brightness(1.1); 
+}

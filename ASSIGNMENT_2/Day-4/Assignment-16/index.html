@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="calculator-wrapper">
+        <div class="calculator-card">
+            <h2>Grade Calculator</h2>
+            <p>Enter your numerical score (0-100) to find your letter grade.</p>
+            
+            <div class="input-group">
+                <label for="scoreInput">Exam Score:</label>
+                <input type="number" id="scoreInput" placeholder="e.g. 85" min="0" max="100">
+            </div>
+
+            <!-- The onclick attribute tells the browser to run our JS function when clicked -->
+            <button onclick="calculateGrade()" class="calc-btn">Calculate Grade</button>
+
+            <!-- The result will be injected here by JavaScript -->
+            <div id="result-box" class="result-hidden">
+                <!-- Dynamic content goes here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

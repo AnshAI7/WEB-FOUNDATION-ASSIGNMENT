@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-wrapper">
+        <section class="task-card">
+            <header class="task-header">
+                <h2>Loop Algorithm Runner</h2>
+                <p>Click a task below to execute its loop logic.</p>
+            </header>
+
+            <!-- Buttons to trigger JavaScript functions -->
+            <div class="button-group">
+                <button onclick="runTask1()" class="run-btn">Task 1: Count 1 to 10</button>
+                <button onclick="runTask2()" class="run-btn">Task 2: Sum 1 to 50</button>
+                <button onclick="runTask3()" class="run-btn">Task 3: Multiply by 5</button>
+                <button onclick="clearScreen()" class="clear-btn">Clear Screen</button>
+            </div>
+
+            <!-- Terminal-like Output Screen -->
+            <div class="terminal-window">
+                <div class="terminal-header">Output Console</div>
+                <pre id="output-screen">Ready to execute...</pre>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

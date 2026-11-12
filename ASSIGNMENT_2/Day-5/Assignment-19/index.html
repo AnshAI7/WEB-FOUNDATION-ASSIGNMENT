@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Functions - Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-wrapper">
+        <section class="converter-card">
+            <header>
+                <h2>Temperature Converter</h2>
+                <p>Built with reusable JavaScript functions.</p>
+            </header>
+
+            <div class="conversion-group">
+                <label>Celsius to Fahrenheit</label>
+                <div class="input-row">
+                    <input type="number" id="inputCelsius" placeholder="Enter °C">
+                    <button onclick="handleCtoF()" class="action-btn bg-blue">Convert</button>
+                </div>
+            </div>
+
+            <div class="divider">OR</div>
+
+            <div class="conversion-group">
+                <label>Fahrenheit to Celsius</label>
+                <div class="input-row">
+                    <input type="number" id="inputFahrenheit" placeholder="Enter °F">
+                    <button onclick="handleFtoC()" class="action-btn bg-orange">Convert</button>
+                </div>
+            </div>
+
+            <div class="result-box">
+                <h3 id="result-display">Result: --</h3>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
