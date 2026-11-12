@@ -3,42 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Functions - Converter</title>
-    <link rel="stylesheet" href="style.css">
+    <title>JS Mini-Projects Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f172a; /* Dark slate background */
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .portal-container { text-align: center; max-width: 800px; width: 100%; }
+        .portal-header h1 { font-size: 2.5rem; color: #38bdf8; margin-bottom: 10px; }
+        .portal-header p { color: #94a3b8; font-size: 1.1rem; margin-bottom: 40px; }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            background-color: #1e293b;
+            padding: 40px 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            text-decoration: none; /* Removes underline from links */
+            color: white;
+            display: block;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .icon { font-size: 3rem; margin-bottom: 15px; }
+        .project-card h2 { font-size: 1.5rem; margin-bottom: 10px; }
+        .project-card p { color: #94a3b8; font-size: 0.95rem; }
+    </style>
 </head>
 <body>
 
-    <main class="app-wrapper">
-        <section class="converter-card">
-            <header>
+    <div class="portal-container">
+        <header class="portal-header">
+            <h1>JS Function Mini-Projects</h1>
+            <p>Select a project below to view the interactive application.</p>
+        </header>
+
+        <div class="project-grid">
+            
+            <!-- Link to the Grade Calculator Folder -->
+            <a href="./Grade-Calculator/index.html" class="project-card">
+                <div class="icon">📝</div>
+                <h2>Grade Calculator</h2>
+                <p>Calculates letter grades from numerical scores using conditional logic.</p>
+            </a>
+
+            <!-- Link to the Temperature Converter Folder -->
+            <a href="./Temperature-Converter/index.html" class="project-card">
+                <div class="icon">🌡️</div>
                 <h2>Temperature Converter</h2>
-                <p>Built with reusable JavaScript functions.</p>
-            </header>
+                <p>Converts Celsius and Fahrenheit using reusable pure functions.</p>
+            </a>
 
-            <div class="conversion-group">
-                <label>Celsius to Fahrenheit</label>
-                <div class="input-row">
-                    <input type="number" id="inputCelsius" placeholder="Enter °C">
-                    <button onclick="handleCtoF()" class="action-btn bg-blue">Convert</button>
-                </div>
-            </div>
+        </div>
+    </div>
 
-            <div class="divider">OR</div>
-
-            <div class="conversion-group">
-                <label>Fahrenheit to Celsius</label>
-                <div class="input-row">
-                    <input type="number" id="inputFahrenheit" placeholder="Enter °F">
-                    <button onclick="handleFtoC()" class="action-btn bg-orange">Convert</button>
-                </div>
-            </div>
-
-            <div class="result-box">
-                <h3 id="result-display">Result: --</h3>
-            </div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
+.utility-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #10b981; /* Emerald green accent for Math */
+    text-align: center;
+}
+
+header h2 {
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.run-btn {
+    width: 100%;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.run-btn:hover {
+    background-color: #059669;
+}
+
+/* Results List Styling */
+.results-hidden {
+    display: none;
+}
+
+.results-visible {
+    display: block;
+    margin-top: 25px;
+    list-style: none;
+    text-align: left;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.results-visible li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #334155;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #cbd5e1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.results-visible li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.results-visible strong {
+    color: #0f172a;
+}
+
+.result-value {
+    color: #10b981;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+}

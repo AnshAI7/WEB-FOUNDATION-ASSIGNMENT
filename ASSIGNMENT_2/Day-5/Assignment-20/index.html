@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Utility Functions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-wrapper">
+        <section class="utility-card">
+            <header>
+                <h2>Math Toolkit</h2>
+                <p>Testing 5 reusable mathematical functions from mathUtils.js</p>
+            </header>
+
+            <button onclick="runMathTests()" class="run-btn">Run 5 Math Functions</button>
+
+            <!-- Results will be printed inside this list -->
+            <ul id="results-list" class="results-hidden">
+                <!-- JS will inject list items here -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- CRITICAL: Link the utility file FIRST so script.js can use its functions -->
+    <script src="mathUtils.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
