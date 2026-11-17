@@ -1,0 +1,88 @@
+/* --- BASE (LIGHT) THEME --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.settings-wrapper { width: 100%; max-width: 500px; }
+
+header { text-align: center; margin-bottom: 30px; }
+header h2 { font-size: 2rem; color: #3b82f6; margin-bottom: 5px; }
+header p { color: #64748b; }
+
+.panel {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.panel h3 { margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; }
+
+.input-group { margin-bottom: 20px; }
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f8fafc;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.storage-alert {
+    background-color: #f0fdf4;
+    color: #166534;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 25px;
+    border: 1px dashed #4ade80;
+}
+
+.btn-danger {
+    width: 100%;
+    background-color: transparent;
+    color: #ef4444;
+    border: 2px solid #fca5a5;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-danger:hover { background-color: #fef2f2; border-color: #ef4444; }
+
+/* --- DARK THEME OVERRIDES --- */
+body.theme-dark { background-color: #0f172a; color: #f8fafc; }
+
+body.theme-dark .panel { background-color: #1e293b; border-color: #334155; }
+body.theme-dark .panel h3 { border-color: #334155; }
+body.theme-dark header p { color: #94a3b8; }
+body.theme-dark label { color: #cbd5e1; }
+body.theme-dark input, body.theme-dark select { background-color: #0f172a; border-color: #475569; color: #f8fafc; }
+body.theme-dark .storage-alert { background-color: #064e3b; color: #34d399; border-color: #059669; }

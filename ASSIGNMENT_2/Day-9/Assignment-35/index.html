@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Node Relationships</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="inspector-wrapper">
+        <header class="main-header">
+            <h2>DOM Node Explorer</h2>
+            <p>Click any element in the "Mock Document" to instantly label its family tree.</p>
+        </header>
+
+        <div class="split-view">
+            
+            <!-- Left Side: The Supplied HTML Document -->
+            <section class="mock-doc-container">
+                <h3>The Supplied HTML Document</h3>
+                
+                <div id="mock-document" class="inspectable">
+                    <header class="inspectable">
+                        <h1 class="inspectable">Tech Blog Article</h1>
+                        <p class="inspectable">Written by Admin</p>
+                    </header>
+                    
+                    <main class="inspectable">
+                        <h2 class="inspectable">Top Programming Languages</h2>
+                        <ul class="inspectable">
+                            <li class="inspectable">JavaScript</li>
+                            <li class="inspectable">Python</li>
+                            <li class="inspectable">Java</li>
+                        </ul>
+                    </main>
+                    
+                    <footer class="inspectable">
+                        <p class="inspectable">Copyright 2026</p>
+                    </footer>
+                </div>
+            </section>
+
+            <!-- Right Side: The Relationship Legend -->
+            <section class="legend-panel">
+                <h3>Node Relationships</h3>
+                
+                <div class="legend-card target-card">
+                    <div class="color-box target-color"></div>
+                    <div class="legend-info">
+                        <strong>Target Node (Clicked)</strong>
+                        <span id="label-target">None selected</span>
+                    </div>
+                </div>
+
+                <div class="legend-card parent-card">
+                    <div class="color-box parent-color"></div>
+                    <div class="legend-info">
+                        <strong>Parent Node</strong>
+                        <span id="label-parent">None selected</span>
+                    </div>
+                </div>
+
+                <div class="legend-card sibling-card">
+                    <div class="color-box sibling-color"></div>
+                    <div class="legend-info">
+                        <strong>Sibling Nodes</strong>
+                        <span id="label-siblings">None selected</span>
+                    </div>
+                </div>
+
+                <div class="legend-card child-card">
+                    <div class="color-box child-color"></div>
+                    <div class="legend-info">
+                        <strong>Child Nodes</strong>
+                        <span id="label-children">None selected</span>
+                    </div>
+                </div>
+                
+                <button onclick="resetInspector()" class="reset-btn">Reset Explorer</button>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

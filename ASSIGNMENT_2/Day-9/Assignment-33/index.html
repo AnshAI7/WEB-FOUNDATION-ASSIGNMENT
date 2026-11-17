@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="validator-wrapper">
+        <header>
+            <h2>JSON Validator & Fetch API</h2>
+            <p>Testing asynchronous data retrieval from a local JSON file.</p>
+        </header>
+
+        <div class="card">
+            <button onclick="fetchCatalogue()" class="fetch-btn">Fetch catalogue.json</button>
+            
+            <div class="output-header">
+                <span id="status-badge" class="badge default">Waiting...</span>
+            </div>
+            
+            <pre id="json-output" class="terminal-box">// Data will appear here</pre>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

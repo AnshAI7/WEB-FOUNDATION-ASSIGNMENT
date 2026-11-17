@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS Revision Challenge</title>
+    <style>
+        /* 1. Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* 2. The Full-Screen Dark Overlay (Absolute/Fixed Positioning) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(15, 23, 42, 0.85); /* Dark transparent blue */
+            
+            /* Flexbox to perfectly center the modal card */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 3. The Modal Card */
+        .modal-card {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 450px;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            
+            /* Pop-in animation */
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* 4. Typography & Icons */
+        .modal-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .modal-title {
+            color: #0f172a;
+            font-size: 1.75rem;
+            margin-bottom: 10px;
+        }
+
+        .modal-desc {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        /* 5. Gradient Button with Hover Effects */
+        .btn-upgrade {
+            display: inline-block;
+            width: 100%;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            
+            /* CSS Gradient Background */
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            background-size: 200% auto;
+            
+            /* Smooth transitions */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-upgrade:hover {
+            /* Shift the gradient and lift the button */
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+        }
+
+        .btn-close {
+            margin-top: 20px;
+            background: none;
+            border: none;
+            color: #94a3b8;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .btn-close:hover {
+            color: #ef4444; /* Turns red on hover */
+        }
+
+        /* Keyframe Animation Definition */
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The Overlay Wrapper -->
+    <div class="modal-overlay">
+        
+        <!-- The Centered Content -->
+        <div class="modal-card">
+            <div class="modal-icon">🚀</div>
+            <h2 class="modal-title">Upgrade to DevDash Pro</h2>
+            <p class="modal-desc">Unlock unlimited tasks, cloud sync across all your devices, and exclusive developer resources.</p>
+            
+            <button class="btn-upgrade">Unlock Pro Features</button>
+            <button class="btn-close">Maybe Later</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

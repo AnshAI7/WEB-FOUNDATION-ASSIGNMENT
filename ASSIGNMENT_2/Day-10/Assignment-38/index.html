@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Profile & State Classes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- The entire wrapper can receive a dark-mode state class -->
+    <main id="app-wrapper" class="app-container">
+        
+        <header class="app-header">
+            <h2>Profile Interaction</h2>
+            <!-- Dark Mode Toggle -->
+            <button id="theme-btn" class="theme-toggle" aria-pressed="false">
+                🌙 Dark Mode
+            </button>
+        </header>
+
+        <section class="profile-card">
+            <div class="profile-header">
+                <div class="avatar">👨‍💻</div>
+                <div class="info">
+                    <h3>Ansh Mishra</h3>
+                    <p>AI Engineer & Full-Stack Developer</p>
+                </div>
+            </div>
+
+            <!-- Follow Button -->
+            <button id="follow-btn" class="btn btn-follow" aria-pressed="false">
+                + Follow
+            </button>
+
+            <!-- Accordion Details -->
+            <div class="details-section">
+                <button id="details-toggle" class="btn-text" aria-expanded="false" aria-controls="hidden-details">
+                    Show Background Details ▼
+                </button>
+                
+                <!-- This paragraph is hidden by default -->
+                <p id="hidden-details" class="details-content">
+                    Passionate about building scalable AI applications and interactive web experiences. 
+                    Currently mastering the MERN stack, Data Structures, and Python Machine Learning models 
+                    at Invertis University.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

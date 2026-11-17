@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-U-S-R Lifecycle Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="visualizer-container">
+        <header>
+            <h2>The L-U-S-R Architecture</h2>
+            <p>Interactive Data Flow Documentation</p>
+        </header>
+
+        <!-- The Interactive Flowchart -->
+        <div class="flowchart">
+            
+            <!-- Step 1: Storage -->
+            <div class="node" id="node-load">
+                <div class="icon">💾</div>
+                <h3>1. localStorage</h3>
+                <small>Browser Hard Drive</small>
+            </div>
+
+            <div class="arrow" id="arrow-1">⬇️</div>
+
+            <!-- Step 2: State -->
+            <div class="node" id="node-state">
+                <div class="icon">🧠</div>
+                <h3>2. JS Array (State)</h3>
+                <small>Application Memory</small>
+            </div>
+
+            <div class="arrow" id="arrow-2">⬇️</div>
+
+            <!-- Step 3: UI -->
+            <div class="node" id="node-render">
+                <div class="icon">💻</div>
+                <h3>3. The DOM (UI)</h3>
+                <small>What the User Sees</small>
+            </div>
+
+            <div class="arrow" id="arrow-3">⬆️ (User Clicks)</div>
+
+            <!-- Step 4: Events -->
+            <div class="node" id="node-update">
+                <div class="icon">⚡</div>
+                <h3>4. Event Listener</h3>
+                <small>User Input</small>
+            </div>
+            
+        </div>
+
+        <!-- The Control Panel -->
+        <section class="controls">
+            <h3 id="step-title">Press Start to Begin Lifecycle</h3>
+            <p id="step-desc">This visualizer will walk you through exactly how data moves in a modern SPA.</p>
+            <button id="btn-next" class="btn">Start Lifecycle Simulation</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

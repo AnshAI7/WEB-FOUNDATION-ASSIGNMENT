@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Test Suite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="test-container">
+        <header>
+            <h2>Automated Unit Tests</h2>
+            <p>Verifying Object Utilities and JSON Fetch integrations.</p>
+        </header>
+
+        <div class="controls">
+            <button onclick="runAllTests()" class="run-btn" id="run-btn">Run Test Suite</button>
+            <span class="status-summary" id="summary">0 / 3 Passed</span>
+        </div>
+
+        <div class="test-results">
+            <!-- Test 1 -->
+            <div class="test-card" id="test-1">
+                <div class="test-info">
+                    <h3>Test 01: Key Formatter</h3>
+                    <p>Expects <code>formatKeyName("targetRoles")</code> to equal <code>"Target Roles"</code>.</p>
+                </div>
+                <div class="test-status pending">Pending</div>
+            </div>
+
+            <!-- Test 2 -->
+            <div class="test-card" id="test-2">
+                <div class="test-info">
+                    <h3>Test 02: Object entries mapping</h3>
+                    <p>Expects an object with 2 properties to return exactly 2 DOM elements.</p>
+                </div>
+                <div class="test-status pending">Pending</div>
+            </div>
+
+            <!-- Test 3 -->
+            <div class="test-card" id="test-3">
+                <div class="test-info">
+                    <h3>Test 03: JSON Fetch Integrity</h3>
+                    <p>Expects <code>catalogue.json</code> to return an Array containing exactly 3 product objects.</p>
+                </div>
+                <div class="test-status pending">Pending</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

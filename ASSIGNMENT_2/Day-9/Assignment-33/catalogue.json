@@ -1,0 +1,26 @@
+[
+    {
+        "id": "PROD-001",
+        "name": "Wireless Noise-Canceling Headphones",
+        "brand": "AudioTech",
+        "price": 299.99,
+        "inStock": true,
+        "tags": ["audio", "wireless", "premium"]
+    },
+    {
+        "id": "PROD-002",
+        "name": "Mechanical Keyboard (Blue Switches)",
+        "brand": "KeyMaster",
+        "price": 95.50,
+        "inStock": true,
+        "tags": ["peripherals", "gaming", "clicky"]
+    },
+    {
+        "id": "PROD-003",
+        "name": "4K Ultra HD Webcam",
+        "brand": "VisionPro",
+        "price": 120.00,
+        "inStock": false,
+        "tags": ["video", "streaming", "usb-c"]
+    }
+]

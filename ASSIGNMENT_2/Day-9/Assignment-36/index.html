@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selection Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="challenge-wrapper">
+        <header>
+            <h2>Element Selection Challenge</h2>
+            <p>Mastering the 5 primary DOM selector methods.</p>
+        </header>
+
+        <div class="arena-grid">
+            
+            <!-- Left Side: The Selection Targets -->
+            <section class="target-arena">
+                <h3>The Arena</h3>
+                
+                <!-- Target 1: Unique ID -->
+                <div id="boss-target" class="arena-box">
+                    <strong>#boss-target</strong> (Unique ID)
+                </div>
+
+                <!-- Target 2: Shared Classes -->
+                <div class="minion-target arena-box">
+                    <strong>.minion-target</strong> (Class)
+                </div>
+                <div class="minion-target arena-box">
+                    <strong>.minion-target</strong> (Class)
+                </div>
+
+                <!-- Target 3: Specific Tags -->
+                <article class="arena-box">
+                    <strong>&lt;article&gt;</strong> (Tag)
+                </article>
+                <article class="arena-box">
+                    <strong>&lt;article&gt;</strong> (Tag)
+                </article>
+
+                <!-- Target 4: Complex Nested Query -->
+                <div class="treasure-chest arena-box">
+                    <span class="gold-coin">.gold-coin (Inside .treasure-chest)</span>
+                </div>
+                <div class="empty-chest arena-box">
+                    <span class="gold-coin">.gold-coin (Inside .empty-chest)</span>
+                </div>
+                
+            </section>
+
+            <!-- Right Side: The Control Panel -->
+            <section class="controls-panel">
+                <h3>Run Selectors</h3>
+                
+                <button onclick="selectById()" class="btn">
+                    1. getElementById
+                </button>
+                
+                <button onclick="selectByClass()" class="btn">
+                    2. getElementsByClassName
+                </button>
+                
+                <button onclick="selectByTag()" class="btn">
+                    3. getElementsByTagName
+                </button>
+                
+                <button onclick="selectQuerySingle()" class="btn">
+                    4. querySelector (First Match)
+                </button>
+                
+                <button onclick="selectQueryAll()" class="btn">
+                    5. querySelectorAll (Complex)
+                </button>
+
+                <button onclick="clearHighlights()" class="btn btn-reset">
+                    Clear All Highlights
+                </button>
+            </section>
+            
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h2 { font-size: 2.2rem; color: #0f172a; margin-bottom: 5px; }
+header p { color: #64748b; font-size: 1.1rem; }
+
+/* The Grid Layout */
+.grid-layout {
+    display: grid;
+    /* Auto-fit creates responsive columns automatically based on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Individual Card Styling */
+.project-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e1;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    background-color: #f8fafc;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.card-category {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3b82f6; /* Blue */
+    margin-bottom: 5px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+    flex-grow: 1; /* Pushes the button to the bottom */
+    margin-bottom: 20px;
+}
+
+.card-btn {
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.card-btn:hover { background-color: #334155; }

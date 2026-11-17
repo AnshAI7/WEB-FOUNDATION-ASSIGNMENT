@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.module-wrapper {
+    width: 100%;
+    max-width: 600px;
+}
+
+header { text-align: center; margin-bottom: 30px; }
+header h2 { font-size: 2rem; color: #38bdf8; margin-bottom: 5px; }
+header p { color: #94a3b8; }
+
+/* Control Buttons */
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.btn:hover { filter: brightness(1.1); }
+
+.btn-primary { background-color: #3b82f6; color: white; }
+.btn-secondary { background-color: #10b981; color: white; }
+.btn-danger { background-color: transparent; border: 2px solid #ef4444; color: #ef4444; }
+.btn-danger:hover { background-color: #ef4444; color: white; }
+
+/* Terminal Output */
+.terminal {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background-color: #334155;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #cbd5e1;
+    border-bottom: 1px solid #0f172a;
+}
+
+#output-screen {
+    padding: 20px;
+    color: #a7f3d0; /* Neon Green */
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+    min-height: 200px;
+    white-space: pre-wrap;
+}

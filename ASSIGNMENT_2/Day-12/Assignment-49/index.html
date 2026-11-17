@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistent TaskMaster + QA Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="split-layout">
+        
+        <!-- LEFT PANEl: The Application -->
+        <main class="app-container">
+            <header class="app-header">
+                <h2>TaskMaster Pro</h2>
+                <p>Fully Persistent SPA</p>
+            </header>
+
+            <form id="task-form" class="task-form">
+                <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off" required>
+                <button type="submit" class="btn-add">Add Task</button>
+            </form>
+
+            <nav class="filter-nav">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </nav>
+
+            <ul id="task-list" class="task-list"></ul>
+            <div id="empty-state" class="empty-state hidden">No tasks found.</div>
+        </main>
+
+        <!-- RIGHT PANEL: The QA Testing Dashboard -->
+        <aside class="qa-dashboard">
+            <header class="qa-header">
+                <h3>🛠️ QA Engineering Panel</h3>
+            </header>
+
+            <div class="qa-section">
+                <h4>1. Live Storage State (JSON)</h4>
+                <div class="terminal">
+                    <pre id="storage-dump">// Initializing database...</pre>
+                </div>
+                <button id="btn-wipe" class="btn-danger">Wipe Database</button>
+            </div>
+
+            <div class="qa-section">
+                <h4>2. Testing Checklist</h4>
+                <ul class="checklist">
+                    <li><label><input type="checkbox"> <strong>Create:</strong> Add a task, verify JSON updates instantly.</label></li>
+                    <li><label><input type="checkbox"> <strong>Persistence:</strong> Refresh the page, verify task survives.</label></li>
+                    <li><label><input type="checkbox"> <strong>Update:</strong> Check a task as complete, verify JSON boolean flips.</label></li>
+                    <li><label><input type="checkbox"> <strong>Filter:</strong> Click 'Active', verify UI hides completed tasks.</label></li>
+                    <li><label><input type="checkbox"> <strong>Delete:</strong> Remove task, verify it vanishes from JSON.</label></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

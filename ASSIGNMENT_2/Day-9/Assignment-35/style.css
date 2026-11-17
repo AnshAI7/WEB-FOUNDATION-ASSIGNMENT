@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.inspector-wrapper {
+    width: 100%;
+    max-width: 900px;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-header h2 { color: #0f172a; font-size: 2rem; margin-bottom: 5px; }
+.main-header p { color: #64748b; }
+
+.split-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Mock Document Styles */
+.mock-doc-container h3, .legend-panel h3 {
+    margin-bottom: 15px;
+    color: #334155;
+    font-size: 1.1rem;
+}
+
+#mock-document {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid #cbd5e1;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+/* Base styles for all inspectable elements */
+.inspectable {
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px dashed #e2e8f0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.inspectable:hover {
+    border-color: #94a3b8;
+}
+
+/* --- THE HIGHLIGHT CLASSES INSTALLED BY JS --- */
+.is-target {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+    border: 2px solid #0f172a !important;
+}
+
+.is-parent {
+    background-color: #eff6ff !important;
+    border: 2px solid #3b82f6 !important; /* Blue */
+}
+
+.is-sibling {
+    background-color: #fefce8 !important;
+    border: 2px solid #eab308 !important; /* Yellow */
+}
+
+.is-child {
+    background-color: #f0fdf4 !important;
+    border: 2px solid #22c55e !important; /* Green */
+}
+
+
+/* Legend Panel Styles */
+.legend-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.legend-card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.color-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.target-color { background-color: #1e293b; }
+.parent-color { background-color: #3b82f6; }
+.sibling-color { background-color: #eab308; }
+.child-color { background-color: #22c55e; }
+
+.legend-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.legend-info strong { font-size: 0.9rem; color: #475569; }
+.legend-info span { font-size: 1rem; color: #0f172a; font-family: monospace; font-weight: bold; }
+
+.reset-btn {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #475569;
+}
+.reset-btn:hover { background-color: #e2e8f0; }

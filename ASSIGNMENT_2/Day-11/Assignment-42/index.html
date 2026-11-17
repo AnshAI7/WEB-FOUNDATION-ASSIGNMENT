@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="contact-wrapper">
+        
+        <!-- VIEW 1: The Form -->
+        <section id="form-view" class="view-panel">
+            <header>
+                <h2>Get in Touch</h2>
+                <p>Send us a message and we'll respond shortly.</p>
+            </header>
+
+            <form id="contact-form">
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required placeholder="John Doe">
+                </div>
+
+                <div class="input-group">
+                    <label for="emailAddr">Email Address</label>
+                    <input type="email" id="emailAddr" required placeholder="john@example.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" required>
+                        <option value="" disabled selected>Select a topic...</option>
+                        <option value="Project Inquiry">Project Inquiry</option>
+                        <option value="Technical Support">Technical Support</option>
+                        <option value="General Question">General Question</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="4" required placeholder="How can we help you?"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- VIEW 2: The Summary (Hidden by default) -->
+        <section id="summary-view" class="view-panel hidden">
+            <div class="success-icon">✅</div>
+            <h2>Message Sent!</h2>
+            <p>Thank you for reaching out, <strong id="out-name"></strong>.</p>
+            
+            <div class="receipt-card">
+                <h3>Submission Summary</h3>
+                <ul class="summary-list">
+                    <li><strong>Email:</strong> <span id="out-email"></span></li>
+                    <li><strong>Topic:</strong> <span id="out-subject"></span></li>
+                    <li><strong>Message:</strong> <span id="out-message"></span></li>
+                </ul>
+            </div>
+
+            <button id="btn-reset" class="btn-reset">Send Another Message</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

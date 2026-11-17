@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDash | Developer Workspace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="app-body">
+    
+    <div class="app-container">
+        
+        <!-- ========================================== -->
+        <!-- LEFT PANEL: Sidebar Navigation             -->
+        <!-- ========================================== -->
+        <aside class="sidebar">
+            <div class="brand">
+                <h1>👨‍💻 DevDash</h1>
+            </div>
+            
+            <div class="user-profile">
+                <!-- User types name here; JS will save it later -->
+                <input type="text" id="user-name" placeholder="Enter your name..." autocomplete="off">
+                <p class="role">Workspace Active</p>
+            </div>
+
+            <nav class="main-nav">
+                <button class="nav-btn active" data-target="view-tasks">📋 Task Master</button>
+                <button class="nav-btn" data-target="view-resources">📚 Resource Library</button>
+            </nav>
+
+            <div class="theme-control">
+                <button id="theme-toggle" class="btn-theme">🌙 Dark Mode</button>
+            </div>
+        </aside>
+
+        <!-- ========================================== -->
+        <!-- RIGHT PANEL: Main Content Area             -->
+        <!-- ========================================== -->
+        <main class="content-area">
+            
+            <!-- VIEW 1: Task Master (Visible by Default) -->
+            <section id="view-tasks" class="view-panel active-view">
+                <header class="view-header">
+                    <h2>Task Master</h2>
+                    <p>Manage your sprints and daily goals.</p>
+                </header>
+
+                <div class="task-dashboard">
+                    <!-- The Input Form -->
+                    <form id="task-form">
+                        <input type="text" id="new-task-input" placeholder="What needs to be built next?" autocomplete="off">
+                        <button type="submit" class="btn-primary">+ Add Task</button>
+                    </form>
+
+                    <!-- The Statistics Bar -->
+                    <div class="task-stats">
+                        <span id="stat-total">Total: 0</span>
+                        <span id="stat-completed">Completed: 0</span>
+                        <button id="btn-clear-completed" class="btn-text">Clear Completed</button>
+                    </div>
+
+                    <!-- The Empty List (JS will inject <li> items here) -->
+                    <ul id="task-list" class="task-list"></ul>
+                    
+                    <div id="empty-tasks" class="empty-state">No active tasks. Time to code!</div>
+                </div>
+            </section>
+
+            <!-- VIEW 2: Resource Library -->
+            <section id="view-resources" class="view-panel hidden-view">
+                <header class="view-header">
+                    <h2>Resource Library</h2>
+                    <p>Your curated learning and reference materials.</p>
+                </header>
+                
+                <!-- NEW: The container for our dynamic category buttons -->
+                <div id="category-filters" class="filter-nav" style="margin-bottom: 20px;">
+                    <!-- JS will inject buttons here -->
+                </div>
+                
+                <div id="resource-grid" class="resource-grid">
+                    <div class="empty-state">Loading resources...</div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

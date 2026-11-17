@@ -1,0 +1,37 @@
+[
+    {
+        "id": "res_01",
+        "title": "Java Data Structures & Algorithms",
+        "category": "Programming",
+        "url": "#",
+        "type": "Documentation"
+    },
+    {
+        "id": "res_02",
+        "title": "Pandas & Matplotlib Cheat Sheet",
+        "category": "Data Analytics",
+        "url": "#",
+        "type": "Reference"
+    },
+    {
+        "id": "res_03",
+        "title": "NIMCET Mathematics Chapter Weightage",
+        "category": "Preparation",
+        "url": "#",
+        "type": "Guide"
+    },
+    {
+        "id": "res_04",
+        "title": "MERN Stack Architecture",
+        "category": "Web Development",
+        "url": "#",
+        "type": "Article"
+    },
+    {
+        "id": "res_05",
+        "title": "Machine Learning with Random Forests",
+        "category": "Artificial Intelligence",
+        "url": "#",
+        "type": "Tutorial"
+    }
+]

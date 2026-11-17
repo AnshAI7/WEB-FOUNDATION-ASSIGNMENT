@@ -1,0 +1,148 @@
+/* ==========================================
+   1. CSS VARIABLES (Theming System)
+========================================== */
+:root {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --accent-color: #3b82f6;     /* Blue */
+    --accent-hover: #2563eb;
+    --danger-color: #ef4444;     /* Red */
+}
+
+/* When the body gets this class, all colors invert globally! */
+body.theme-dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --accent-color: #38bdf8;     /* Light Blue */
+    --accent-hover: #0284c7;
+}
+
+/* ==========================================
+   2. BASE RESETS & LAYOUT
+========================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Core CSS Grid Split-Pane Layout */
+.app-container {
+    width: 95%;
+    max-width: 1200px;
+    height: 90vh;
+    background-color: var(--bg-secondary);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: grid;
+    /* 280px left column for Sidebar, remaining space for Main Area */
+    grid-template-columns: 280px 1fr; 
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+/* ==========================================
+   3. SIDEBAR STYLING
+========================================== */
+.sidebar {
+    background-color: var(--bg-primary);
+    border-right: 1px solid var(--border-color);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand h1 { font-size: 1.5rem; margin-bottom: 30px; color: var(--text-primary); }
+
+.user-profile { margin-bottom: 40px; }
+.user-profile input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+.user-profile input:focus { outline: none; border-color: var(--accent-color); }
+.user-profile .role { font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
+
+.main-nav { flex-grow: 1; display: flex; flex-direction: column; gap: 10px; }
+.nav-btn {
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.nav-btn:hover { background-color: var(--bg-secondary); color: var(--text-primary); }
+.nav-btn.active { 
+    background-color: var(--bg-secondary); 
+    color: var(--accent-color); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+}
+
+.btn-theme { 
+    background: none; 
+    border: 2px solid var(--border-color); 
+    color: var(--text-primary); 
+    padding: 10px; 
+    border-radius: 8px; 
+    width: 100%; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+/* ==========================================
+   4. MAIN CONTENT AREA STYLING
+========================================== */
+.content-area { padding: 40px; overflow-y: auto; }
+.view-header { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+.view-header h2 { font-size: 2rem; margin-bottom: 5px; }
+.view-header p { color: var(--text-secondary); }
+
+/* Routing Classes */
+.hidden-view { display: none !important; }
+.active-view { animation: fadeIn 0.4s ease; }
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Task Master Shell */
+.task-dashboard { max-width: 700px; }
+#task-form { display: flex; gap: 10px; margin-bottom: 20px; }
+#task-form input { flex-grow: 1; padding: 15px; border-radius: 8px; border: 1px solid var(--border-color); background-color: var(--bg-primary); color: var(--text-primary); font-size: 1rem; }
+#task-form input:focus { outline: none; border-color: var(--accent-color); }
+.btn-primary { background-color: var(--accent-color); color: #ffffff; border: none; padding: 0 25px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+.btn-primary:hover { background-color: var(--accent-hover); }
+
+.task-stats { display: flex; gap: 20px; margin-bottom: 20px; font-size: 0.9rem; color: var(--text-secondary); align-items: center; }
+.btn-text { background: none; border: none; color: var(--danger-color); cursor: pointer; margin-left: auto; font-weight: bold; }
+
+.task-list { list-style: none; }
+.empty-state { text-align: center; padding: 30px; color: var(--text-secondary); font-style: italic; }
+
+/* Resource Library Shell */
+.resource-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }

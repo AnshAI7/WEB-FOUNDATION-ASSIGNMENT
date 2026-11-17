@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistent Settings Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="app-body">
+
+    <main class="settings-wrapper">
+        <header>
+            <h2 id="greeting-text">Welcome, Guest!</h2>
+            <p>Your preferences will survive a page refresh.</p>
+        </header>
+
+        <section class="panel">
+            <h3>User Preferences</h3>
+            
+            <div class="input-group">
+                <label for="username">Display Name</label>
+                <input type="text" id="username" placeholder="Enter your name..." autocomplete="off">
+            </div>
+
+            <div class="input-group">
+                <label for="theme-select">App Theme</label>
+                <select id="theme-select">
+                    <option value="light">Light Mode</option>
+                    <option value="dark">Dark Mode</option>
+                </select>
+            </div>
+            
+            <div class="storage-alert">
+                <small>💾 Settings auto-save to <strong>localStorage</strong> instantly.</small>
+            </div>
+        </section>
+        
+        <button id="btn-clear" class="btn-danger">Reset All Settings</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro - CRUD App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h2>TaskMaster Pro</h2>
+            <p>Full-featured CRUD Application</p>
+        </header>
+
+        <!-- Task Input Form -->
+        <form id="task-form" class="task-form">
+            <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off" required>
+            <button type="submit" class="btn-add">Add Task</button>
+        </form>
+
+        <!-- Filter Controls -->
+        <nav class="filter-nav">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </nav>
+
+        <!-- Dynamic Task List -->
+        <ul id="task-list" class="task-list">
+            <!-- JS renders tasks here -->
+        </ul>
+        
+        <!-- Empty State Message -->
+        <div id="empty-state" class="empty-state hidden">
+            No tasks found.
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

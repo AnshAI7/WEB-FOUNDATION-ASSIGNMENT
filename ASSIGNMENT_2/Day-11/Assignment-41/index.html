@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Reading List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header>
+            <h2>My Reading List</h2>
+            <p>Track your upcoming books, articles, and research papers.</p>
+        </header>
+
+        <!-- The Input Form -->
+        <section class="form-section">
+            <form id="add-item-form">
+                <input 
+                    type="text" 
+                    id="item-input" 
+                    placeholder="E.g., Clean Code by Robert C. Martin" 
+                    autocomplete="off"
+                >
+                <button type="submit" class="btn-add">Add to List</button>
+            </form>
+            <div id="error-msg" class="error hidden">Please enter a title.</div>
+        </section>
+
+        <!-- The Dynamic List Container -->
+        <section class="list-section">
+            <ul id="reading-list" class="dynamic-list">
+                <!-- JavaScript will inject new <li> elements here -->
+            </ul>
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

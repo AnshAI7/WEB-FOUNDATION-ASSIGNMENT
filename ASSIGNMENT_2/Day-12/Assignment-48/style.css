@@ -1,0 +1,93 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.visualizer-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+header { text-align: center; margin-bottom: 30px; }
+header h2 { color: #38bdf8; font-size: 2rem; margin-bottom: 5px; }
+header p { color: #94a3b8; }
+
+/* Flowchart Nodes */
+.flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.node {
+    background-color: #0f172a;
+    border: 2px solid #334155;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+    transition: all 0.3s ease;
+    opacity: 0.5; /* Dimmed by default */
+}
+
+.node .icon { font-size: 2rem; margin-bottom: 5px; }
+.node h3 { font-size: 1.1rem; color: #e2e8f0; }
+.node small { color: #64748b; font-weight: bold; }
+
+.arrow {
+    color: #475569;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+/* THE GLOW EFFECT INSTALLED BY JS */
+.is-active {
+    opacity: 1;
+    border-color: #38bdf8;
+    background-color: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    transform: scale(1.05);
+}
+.arrow-active {
+    opacity: 1;
+    color: #38bdf8;
+}
+
+/* Controls Box */
+.controls {
+    background-color: #0f172a;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px dashed #475569;
+}
+
+#step-title { color: #34d399; margin-bottom: 10px; font-size: 1.2rem; }
+#step-desc { color: #94a3b8; margin-bottom: 20px; line-height: 1.5; height: 50px; }
+
+.btn {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #0284c7; color: white; }
